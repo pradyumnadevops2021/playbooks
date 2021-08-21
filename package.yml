@@ -1,0 +1,9 @@
+---
+- name: Installing a package
+  hosts: webservers
+  become: true
+  tasks:
+  - name: Installing a package "tree"        
+    yum:
+      name: tree
+      state: installed

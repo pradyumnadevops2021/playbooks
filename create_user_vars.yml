@@ -1,0 +1,13 @@
+---
+- name: Using variables
+  hosts: all
+  become: true
+
+  vars:
+    user: Jagannath
+
+  tasks:
+  - name: Creating user {{user}}      
+    user:
+      name: "{{user}}"
+
